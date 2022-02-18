@@ -1,18 +1,19 @@
 <template lang="pug">
+
   #app
 
-    a(
-      v-if="quote.link"
-      :href="quote.link"
-    ) {{ quote.body }}
-
-    span(v-else) {{ quote.body }}
+    //a(
+    //  v-if="quote.link" :href="quote.link"
+    //) {{ quote.body }}
+    //
+    //span(v-else) {{ quote.body }}
+    MainArea
     <!--<PwaNotification />-->
 </template>
 
 <script>
   import PwaNotification from './components/PwaNotification.vue'
-  import { getRandomQuote } from '@/quotes'
+  import MainArea from "@/components/HomeScreen";
 
   export default {
     name: 'app',
@@ -23,10 +24,9 @@
     },
     components: {
       PwaNotification,
+      MainArea
     },
-    mounted() {
-      this.quote = getRandomQuote()
-    },
+
   }
 </script>
 
